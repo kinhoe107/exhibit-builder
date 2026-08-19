@@ -1,0 +1,21 @@
+* text=auto eol=lf
+
+*.pdf binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+*.eml binary
+*.wasm binary
+*.gz binary
+*.zip binary
+*.7z binary
+*.exe binary
+*.dll binary
+*.ico binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+
+*.bat text eol=crlf
+*.cmd text eol=crlf

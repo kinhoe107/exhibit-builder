@@ -1,0 +1,188 @@
+EXHIBIT BUILDER FREEWARE END USER LICENCE AGREEMENT
+
+Licence version: 1.1
+Effective date: 11 August 2026
+
+IMPORTANT NOTICE
+
+This End User Licence Agreement governs your use of Exhibit Builder.
+
+Exhibit Builder assists with preparing indexed exhibit bundles. It does not provide legal advice and does not replace professional judgement or the user's responsibility to inspect the completed bundle.
+
+By installing, launching or using the Software, or by selecting the acceptance option presented during installation or first use, you agree to this Agreement. If you do not agree, do not install or use the Software.
+
+1. LICENCE
+
+Subject to this Agreement, the Licensor grants you a limited, personal, non-exclusive, non-transferable and revocable licence to install and use the Software without charge for lawful personal, professional, educational or organisational purposes.
+
+You may install the Software on devices that you own or control and make reasonable backup copies of the installer for your own use.
+
+The Software is licensed, not sold.
+
+2. FREEWARE AND OWNERSHIP
+
+The Software is freeware. This means that it may be used without paying a licence fee. It does not mean that the Software is open source, in the public domain or free from legal restrictions.
+
+The Licensor retains all rights in the Software, including its code, interface, design, documentation, branding, guided sample and other supplied materials, except for rights belonging to third parties.
+
+No ownership rights are transferred to you under this Agreement.
+
+3. RESTRICTIONS
+
+Except where applicable law expressly permits otherwise, you must not:
+
+a. copy or redistribute the Software or its installer to another person, except for a personal backup;
+b. sell, sublicense, rent, lease, host or commercially distribute the Software;
+c. publish or distribute modified versions of the Software;
+d. reverse engineer, decompile or disassemble the packaged Software, except to the extent expressly permitted by applicable law. This restriction does not limit access to source code that the Licensor has intentionally published through the official source repository;
+e. remove or obscure copyright, ownership, licence or attribution information;
+f. use the Software to create a competing product substantially derived from it;
+g. represent that the Software is your product or that you are authorised to act for the Licensor; or
+h. use the Software for any unlawful, fraudulent or abusive purpose.
+
+You may direct other people to the Licensor's official release page so that they can obtain an authentic packaged release.
+
+4. GUIDED SAMPLE
+
+The Software may include a guided sample containing a demonstration witness statement, example exhibits, spreadsheets and document templates.
+
+The guided sample is fictional and is supplied only to explain and test the Software. It is not a realistic witness statement, legal precedent, approved court document or model of legal drafting.
+
+You may use and reproduce outputs generated from the guided sample for evaluation, training and demonstration. You must not present its fictional contents as genuine evidence or as relating to a real person, dispute or proceeding.
+
+The guided sample may be hidden within the Software's home screen. If it is unavailable, the Software may continue to be used with the user's own documents, although the guided demonstration will not be available.
+
+5. HOW THE SOFTWARE OPERATES
+
+The Software is designed to process documents locally on the user's device. It may read witness statements and proposed exhibits, identify possible exhibit references, suggest document matches, render supported files, prepare an index, add selected cover or divider pages, apply page numbering and assemble one or more PDF bundle volumes.
+
+Depending on the files and options selected, the Software may:
+
+a. place printed page numbers or other selected information onto generated PDF pages;
+b. scale or render pages to the selected output size;
+c. render Word documents or spreadsheets into PDF form;
+d. invoke locally installed software, including Microsoft Excel where available, to improve spreadsheet rendering fidelity;
+e. perform optical character recognition or text extraction;
+f. create local temporary files, previews, recovery information, preferences and licence-acceptance records; and
+g. preserve local project information so that interrupted work may be recovered.
+
+The Software is designed not to alter the user's original source documents. Generated bundles, previews, temporary copies and project files are separate outputs.
+
+The Software is not designed to upload source documents to the Licensor. However, the Licensor cannot guarantee the behaviour of the user's operating system, third-party software, cloud-synchronised folders, security software or other services installed on the device.
+
+6. DOCUMENT CONVERSION AND FIDELITY
+
+PDF conversion is not always identical to printing from the program that created the source file.
+
+Word-processing documents, spreadsheets, emails, scanned documents, unusual page sizes, unsupported fonts, formulas, hidden content, macros, external links and complex layouts may render differently or incompletely.
+
+The Software may display warnings where it detects a possible problem, but it cannot detect every omission, alteration or conversion error.
+
+In particular:
+
+a. spreadsheet results may depend on values already saved in the workbook;
+b. formulas may not be recalculated unless compatible local software performs that operation;
+c. only selected worksheets and selected or detected print areas may be included;
+d. Word features such as floating objects, fields, headers, embedded content or complex styling may not be reproduced exactly;
+e. optical character recognition may contain errors; and
+f. scaling, page-number overlays, cover pages, index pages, divider pages and exhibit-cover pages may intentionally alter the appearance or pagination of the generated bundle.
+
+You must compare important converted documents against their source files before relying on the completed bundle.
+
+7. PROPOSED MATCHES AND USER DECISIONS
+
+Document matches, exhibit descriptions, dates, duplicate warnings, exhibit references, page ranges and other information produced by the Software are suggestions only.
+
+The Software may make an incorrect match, overlook a reference, identify the same document more than once, omit relevant content or include the wrong document.
+
+You are responsible for reviewing and confirming every proposed document match, included or excluded exhibit, exhibit order, spreadsheet selection and print range, conversion, page number, reference, template, warning, exception, unreferenced document and final PDF before it is filed, served, disclosed, submitted or otherwise relied upon.
+
+Warnings shown within the Software do not automatically become part of the finished exhibit bundle unless the interface expressly states otherwise.
+
+8. YOUR DOCUMENTS AND GENERATED OUTPUT
+
+You retain whatever rights you already hold in your source documents.
+
+As between you and the Licensor, the Licensor claims no ownership of a bundle generated from your documents merely because it was produced using the Software. This does not give you rights in material owned by another person.
+
+You are responsible for ensuring that you have lawful authority to process, copy, convert, reproduce and disclose every document supplied to the Software.
+
+9. CONFIDENTIAL AND SENSITIVE INFORMATION
+
+Exhibit bundles may contain confidential, privileged, personal, commercially sensitive or legally restricted information.
+
+You are solely responsible for deciding whether it is appropriate to process that information; securing the device and storage location; controlling access to source files, project files, temporary files and generated outputs; checking required redactions; protecting access credentials; and complying with applicable professional, contractual, procedural and legal obligations.
+
+Local processing does not remove the need for appropriate confidentiality, security and information-handling procedures.
+
+10. THIRD-PARTY SOFTWARE
+
+The Software may contain or operate with software, libraries, fonts, conversion tools or other components supplied by third parties.
+
+Those components remain subject to any applicable third-party rights and licence terms. Nothing in this Agreement grants broader rights in a third-party component or overrides a third party's licence.
+
+The Licensor is not responsible for Microsoft Office, PDF readers, operating-system components or other separately installed third-party products.
+
+11. UPDATES AND SUPPORT
+
+The Licensor may release updates, corrections or replacement versions but is not obliged to do so.
+
+The Software may be changed, suspended or discontinued at any time. A future version may require acceptance of revised terms.
+
+No guaranteed maintenance, technical support, compatibility service, data-recovery service or response time is provided.
+
+12. NO WARRANTY
+
+The Software is provided free of charge on an "as is" and "as available" basis.
+
+To the maximum extent permitted by law, the Licensor does not warrant that the Software will be error-free or uninterrupted; detect every exhibit reference or source-document problem; produce a bundle complying with any court, tribunal, arbitral institution or procedural direction; preserve every aspect of every source document; operate with every file, device, operating system or third-party application; or prevent loss, corruption, accidental disclosure or unauthorised access.
+
+You are responsible for maintaining independent copies of all source documents and for checking the final output.
+
+Nothing in this Agreement excludes any statutory right or warranty that applicable law does not permit to be excluded.
+
+13. LIMITATION OF LIABILITY
+
+To the maximum extent permitted by law, the Licensor will not be liable for any loss arising from or connected with the Software, including loss or corruption of documents, projects or generated bundles; an incorrect, incomplete or unreadable exhibit; incorrect pagination, indexing, matching, conversion, rendering or optical character recognition; missed filing, service or procedural deadlines; rejection of a bundle; loss of confidentiality, privilege, business, revenue, opportunity, reputation or anticipated savings; or indirect or consequential loss.
+
+Where liability cannot lawfully be excluded, the Licensor's liability will be limited to the minimum amount permitted by applicable law.
+
+Nothing in this Agreement excludes or limits liability for fraud, fraudulent misrepresentation, death or personal injury caused by negligence, or any other liability that cannot lawfully be excluded.
+
+14. TERMINATION
+
+This Agreement and your licence terminate automatically if you materially breach its terms.
+
+Following termination, you must stop using the Software and delete copies under your control, except where retaining a copy is required by law.
+
+Termination does not affect rights or obligations that arose before termination. Provisions concerning ownership, restrictions, warranties, liability and governing law continue to apply where relevant.
+
+15. GENERAL TERMS
+
+If any provision of this Agreement is found to be invalid or unenforceable, the remaining provisions will continue to apply. The affected provision will be treated as modified only to the minimum extent necessary to make it valid and enforceable.
+
+A failure or delay in enforcing a right does not waive that right.
+
+You may not transfer this Agreement without the Licensor's consent. The Licensor may transfer its rights and obligations to a successor responsible for the Software.
+
+This Agreement constitutes the entire agreement between you and the Licensor concerning your use of the Software, except for any rights or obligations that cannot lawfully be excluded.
+
+16. GOVERNING LAW AND JURISDICTION
+
+This Agreement is governed by the law of England and Wales.
+
+Subject to any mandatory rights available to you under the law of your country of residence, the courts of England and Wales have exclusive jurisdiction over disputes arising from this Agreement or the Software.
+
+17. DEFINITIONS
+
+In this Agreement:
+
+"Agreement" means this Exhibit Builder Freeware End User Licence Agreement.
+
+"Exhibit Builder" and "Software" mean the packaged desktop application distributed under that name, together with its supplied documentation, guided sample and associated application materials, but excluding the user's documents and separately licensed third-party software.
+
+"Licensor" means the developer and distributor of Exhibit Builder operating through the GitHub username kinhoe107.
+
+"source document" means a witness statement, exhibit, spreadsheet, email, PDF, template or other file supplied by the user for processing.
+
+"you" and "user" mean the individual who installs, accesses or uses the Software and, where that individual acts for an organisation, that organisation.

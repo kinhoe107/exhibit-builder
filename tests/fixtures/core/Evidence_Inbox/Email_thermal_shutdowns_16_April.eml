@@ -1,0 +1,45 @@
+From: Daniel Reeve <daniel.reeve@meridian.example>
+To: Elena Park <elena.park@northbridge.example>
+Cc: Amelia Hart <amelia.hart@northbridge.example>
+Date: Thu, 16 Apr 2026 15:38:00 +0000
+Subject: RE: Urgent - thermal shutdowns in first delivery
+Message-ID: <ah7-2@meridian.example>
+X-Synthetic-Exhibit: AH7
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+EXHIBIT AH7
+Synthetic Exhibit Builder test exhibit
+
+From: Daniel Reeve <daniel.reeve@meridian.example>
+Sent: Thu, 16 Apr 2026 15:38:00 +0000
+To: Elena Park <elena.park@northbridge.example>
+Subject: RE: Urgent - thermal shutdowns in first delivery
+
+Elena,
+
+We used an equivalent processor because the MX-46 was unavailable. Our engine=
+ering team believed it met the required envelope. Please pause further testin=
+g while we review the shutdown logs.
+
+Daniel
+
+------------------------------------------------------------------------
+Earlier message
+------------------------------------------------------------------------
+From: Elena Park <elena.park@northbridge.example>
+Sent: Thu, 16 Apr 2026 13:12:00 +0000
+To: Daniel Reeve <daniel.reeve@meridian.example>
+Subject: Urgent - thermal shutdowns in first delivery
+
+Daniel,
+
+Incoming tests on serials MC-26001 to MC-26008 produced six thermal shutdowns=
+ before completion of the required eight-hour soak. The processor markings al=
+so do not match the approved MX-46 board.
+
+Please confirm immediately whether Meridian changed the processor specificati=
+on.
+
+Elena

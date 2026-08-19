@@ -1,0 +1,103 @@
+{
+  "case": "Northbridge Renewables Limited v Meridian Components Limited",
+  "witness": "Amelia Hart",
+  "statement_date": "15 July 2026",
+  "exhibits": [
+    {
+      "exhibit_mark": "AH1",
+      "description": "Executed Supply Agreement",
+      "document_date": "1 February 2026",
+      "statement_paragraph": 12,
+      "citation_text": "I refer to the executed Supply Agreement dated 1 February 2026, exhibited to this statement as AH1.",
+      "source_filename": "Executed_Supply_Agreement_2026-02-01.pdf",
+      "expected_status": "matched"
+    },
+    {
+      "exhibit_mark": "AH2",
+      "description": "Purchase Order NRL-1047",
+      "document_date": "3 February 2026",
+      "statement_paragraph": 14,
+      "citation_text": "Northbridge issued its implementing purchase order on 3 February. A copy of Purchase Order NRL-1047 is at exhibit AH2.",
+      "source_filename": "PO_NRL-1047.pdf",
+      "expected_status": "matched"
+    },
+    {
+      "exhibit_mark": "AH3",
+      "description": "Email chain - delivery dates and processor allocation",
+      "document_date": "5 February 2026",
+      "statement_paragraph": 15,
+      "citation_text": "By an email sent on 5 February, Mr Reeve confirmed the two delivery dates and stated that processor allocation was complete. That email and my reply are exhibited together as AH3.",
+      "source_filename": "Email_Orchard_Vale_delivery_dates.eml",
+      "expected_status": "matched"
+    },
+    {
+      "exhibit_mark": "AH4",
+      "description": "Progress meeting minutes",
+      "document_date": "11 March 2026",
+      "statement_paragraph": 18,
+      "citation_text": "The agreed minutes of that meeting record those assurances. I refer to the minutes marked AH4.",
+      "source_filename": "Progress_Meeting_Minutes_2026-03-11.docx",
+      "expected_status": "matched"
+    },
+    {
+      "exhibit_mark": "AH5",
+      "description": "Email chain - processor shortage and delay",
+      "document_date": "18 March 2026",
+      "statement_paragraph": 21,
+      "citation_text": "The 18 March email chain, in which I asked why the shortage had not been disclosed earlier, is exhibited as AH5.",
+      "source_filename": "Email_processor_supply_issue_18_March.eml",
+      "expected_status": "matched"
+    },
+    {
+      "exhibit_mark": "AH6",
+      "description": "Northbridge formal notice of delay",
+      "document_date": "25 March 2026",
+      "statement_paragraph": 23,
+      "citation_text": "On 25 March, Northbridge sent a formal notice requiring Meridian to provide a recovery plan and confirm cure by 1 April. I refer to that notice of delay as exhibit AH6.",
+      "source_filename": "Northbridge_Notice_of_Delay_2026-03-25.docx",
+      "expected_status": "matched"
+    },
+    {
+      "exhibit_mark": "AH7",
+      "description": "Email chain - thermal shutdowns and processor substitution",
+      "document_date": "16 April 2026",
+      "statement_paragraph": 28,
+      "citation_text": "That quality-warning email and Meridian's response are exhibited as AH7.",
+      "source_filename": "Email_thermal_shutdowns_16_April.eml",
+      "expected_status": "matched"
+    },
+    {
+      "exhibit_mark": "AH8",
+      "description": "Verity independent inspection report",
+      "document_date": "22 April 2026",
+      "statement_paragraph": 31,
+      "citation_text": "I refer to Verity's inspection report dated 22 April, exhibited as AH8.",
+      "source_filename": "Verity_Inspection_Report_VES-2261.pdf",
+      "expected_status": "matched"
+    },
+    {
+      "exhibit_mark": "AH9",
+      "description": "Northbridge termination letter",
+      "document_date": "30 April 2026",
+      "statement_paragraph": 34,
+      "citation_text": "On 30 April, Northbridge terminated the supply agreement for material delay and non-conformity. The termination letter is exhibited as AH9.",
+      "source_filename": "Northbridge_Termination_Letter_2026-04-30.pdf",
+      "expected_status": "matched"
+    },
+    {
+      "exhibit_mark": "AH10",
+      "description": "Apex expedited replacement invoice AC-7782",
+      "document_date": "5 May 2026",
+      "statement_paragraph": 36,
+      "citation_text": "Apex charged GBP 520,000 for 40 expedited replacement units, including expedited freight. Its invoice AC-7782 dated 5 May is exhibited as AH10.",
+      "source_filename": "Apex_Invoice_AC-7782.pdf",
+      "expected_status": "matched"
+    }
+  ],
+  "intentional_challenges": [
+    {
+      "filename": "UNREFERENCED_DRAFT_Status_Request.pdf",
+      "expected_result": "Flag as supplied but not cited"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+import assert from "node:assert/strict";
+import { access, readFile } from "node:fs/promises";
+import test from "node:test";
+
+test("desktop shell is local-only and blocks remote capabilities", async () => {
+  const [main, preload, packageJson, eula] = await Promise.all([
+    readFile(new URL("../electron/main.cjs", import.meta.url), "utf8"),
+    readFile(new URL("../electron/preload.cjs", import.meta.url), "utf8"),
+    readFile(new URL("../package.json", import.meta.url), "utf8"),
+    readFile(new URL("../build/EULA.txt", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(main, /listen\(0,\s*"127\.0\.0\.1"/);
+  assert.match(main, /webRequest\.onBeforeRequest/);
+  assert.match(main, /callback\(\{\s*cancel:\s*!allowed\s*\}\)/);
+  assert.match(main, /setPermissionRequestHandler/);
+  assert.match(main, /callback\(false\)/);
+  assert.match(main, /setWindowOpenHandler\(\(\)\s*=>\s*\(\{\s*action:\s*"deny"/);
+  assert.match(main, /nodeIntegration:\s*false/);
+  assert.match(main, /contextIsolation:\s*true/);
+  assert.match(main, /sandbox:\s*true/);
+  assert.match(main, /partition:\s*APP_PARTITION/);
+  assert.match(main, /session\.fromPartition\(APP_PARTITION\)/);
+  assert.match(main, /will-navigate/);
+  assert.match(main, /details\.url === localOrigin/);
+  assert.match(main, /CHROMIUM_PDF_VIEWER_ORIGIN = "chrome-extension:\/\/mhjfbmdgcfjbbpaeojofohoefgiehjai"/);
+  assert.match(main, /details\.url\.startsWith\(`\$\{CHROMIUM_PDF_VIEWER_ORIGIN\}\/`\)/);
+  assert.doesNotMatch(main, /details\.url\.startsWith\("chrome-extension:"\)/, "only Chromium's fixed PDF viewer origin may load extension resources");
+  assert.match(main, /const window = makeWindow\(\)/, "the primary workspace uses the single sandboxed window configuration");
+  assert.doesNotMatch(main, /makeWindow\(false\)/, "do not create or retry with an unsandboxed renderer");
+  assert.doesNotMatch(main, /if \(!SMOKE_TEST && !ANALYSIS_SMOKE_TEST\) window\.show\(\)/);
+  assert.match(main, /window\.once\("ready-to-show", \(\) => \{\s*if \(window\.isMinimized\(\)\) window\.restore\(\);\s*window\.show\(\);\s*window\.focus\(\);/);
+  assert.ok(main.indexOf('window.once("ready-to-show"') < main.indexOf("await loadWorkspace(window)"), "ready-to-show must be registered before load");
+  assert.match(main, /if \(!SMOKE_TEST && !ANALYSIS_SMOKE_TEST\) \{\s*window\.once\("ready-to-show"/);
+  assert.doesNotMatch(main, /sandbox:\s*false/);
+  assert.match(main, /appendSwitch\("password-store",\s*"basic"\)/);
+  assert.match(main, /appendSwitch\("in-process-gpu"\)/, "managed GPU child must not respawn outside the main process");
+  assert.match(main, /appendSwitch\("disable-gpu"\)/);
+  assert.doesNotMatch(main, /appendSwitch\("disable-gpu-compositing"/);
+  assert.doesNotMatch(main, /appendSwitch\("use-angle"/);
+  assert.match(main, /WORKSPACE_LOAD_TIMEOUT_MS/);
+  assert.match(main, /window-load-timeout/);
+  assert.match(main, /loadWorkspace\(window\)/);
+  assert.match(main, /process\.exitCode = passed \? 0 : 1/);
+  assert.match(main, /installDiagnosticStreamErrorHandlers/, "stream failures use the tested EPIPE-only exception path");
+  assert.match(main, /diagnostic-stream-errors\.log/, "non-EPIPE failures have a durable fallback record");
+  assert.match(main, /exhibit-review-card/, "packaged analysis smoke test should track the current review markup");
+  assert.match(main, /review-card-identity > strong/, "packaged analysis smoke test should read the compact exhibit identities");
+  assert.match(main, /Cited at paragraph/, "packaged analysis smoke test should read paragraph locators from the card");
+  assert.doesNotMatch(main, /Review list #/, "packaged analysis smoke test must not require the retired review-list number on the card");
+  assert.doesNotMatch(main, /Bundle mark AH1/, "packaged analysis smoke test must not require the bundle-mark chip on the card");
+  assert.match(main, /Sample invoice/, "packaged analysis smoke test should identify the replaced card by its index description");
+  assert.doesNotMatch(main, /\^Item " \+ \(index \+ 1\) \+ " - /, "packaged analysis smoke test must not still require the retired Item N title");
+  assert.match(main, /reference-format-note > strong/, "packaged analysis smoke test should verify the one project-level reference format");
+  assert.match(main, /review-sticky-bar span/, "packaged analysis smoke test should use the visible statement-reference total rather than hidden presentation markup");
+  assert.match(main, /citedReferenceCount === 6/, "the guided smoke test should require all six instructional statement references");
+  assert.match(main, /details\.document-picker/, "packaged analysis smoke test should exercise the replacement document chooser");
+  assert.match(main, /documentPickerPassed/, "packaged analysis smoke test should require a stable card after source replacement");
+  assert.match(main, /let templatePreviewPassed = false/, "guided sample smoke should separately gate custom-template preview rendering");
+  assert.match(main, /data-preview-purpose="template-preview"/, "custom-template smoke should use the local template PDF renderer");
+  assert.match(main, /templatePreviewCanvas\?\.width > 10/, "custom-template smoke should require a painted preview canvas");
+  assert.match(main, /templateConfirmationWasEnabled/, "custom-template smoke should require and save exact-artifact confirmation");
+  assert.match(main, /standardTemplateStatePassed && templateSelectionPassed && templateResetPassed/, "guided sample smoke should exercise honest standard, selected, and reset template states");
+  assert.match(main, /new DataTransfer\(\)/, "custom-template smoke should select a real bundled PDF through the file input");
+  assert.match(main, /selectedInput\?\.hidden/, "selected custom templates should hide the native input from view and accessibility flow");
+  assert.match(main, /!document\.querySelector\("\.readiness-item\.template"\)/, "returning to standard design should remove the template blocker");
+  assert.doesNotMatch(main, /iframe\[src\^="blob:"\]/, "template preview smoke test must not treat a blank Chromium PDF iframe as success");
+  assert.match(main, /confirmScrollPassed/, "packaged analysis smoke test should keep later-card confirmations from jumping to the top");
+  assert.match(main, /browserClamped/, "confirmation scroll smoke should accept only the browser's document-bottom clamp");
+  assert.match(main, /scrollHeld/, "confirmation scroll smoke should require exact raw-scroll retention or clamp");
+  assert.match(main, /confirmFocusPassed/, "packaged analysis smoke should require focus on the next expected Review control");
+  assert.match(main, /focusedCandidateId === expectedNextCandidateId/, "confirmation focus smoke should require the exact next pending card");
+  assert.match(main, /focusedCandidateId === currentCandidateId/, "confirmation focus smoke should require the exact current-card fallback");
+  assert.match(main, /!currentCardStillPresent && focused\?\.matches/, "global confirmation focus fallback should require the current card to be gone");
+  assert.match(main, /emailCompact && emailAttachmentsOpenBeforeMinimise && emailMinimiseAfterReview/, "packaged analysis smoke test should compact a resolved email and restore Minimise after Review");
+  assert.match(main, /attachmentRowCount > 0 && emailChoicesMade === attachmentRowCount/, "email smoke should require one real choice for every attachment row");
+  assert.match(main, /emailAttachmentsOpenBeforeMinimise/, "packaged analysis smoke test should exercise Minimise while the attachment panel is open");
+  assert.match(main, /emailCompactAfterMinimise/, "packaged analysis smoke test should click Minimise and verify compaction");
+  assert.match(main, /emailAttachmentsClosedAfterMinimise/, "Minimise must clear the attachment-panel expansion state");
+  assert.match(main, /emailDecisionsAfterMinimise && emailDecisionsAfterUndo/, "email attachment decisions must survive Minimise, Review, and undoing document confirmation");
+  assert.match(main, /emailCompactAfterAttachmentsFirstConfirm/, "packaged analysis smoke test should cover attachments-first document confirmation");
+  assert.match(main, /repeatProgressPassed/, "packaged analysis smoke test should name the repeat exhibit in both progress lines");
+  assert.match(main, /numberingInputPassed/, "packaged analysis smoke test should type and retain a prefix and suffix before applying them");
+  assert.match(main, /warningBeforeApply/, "the warning must not interrupt typing before the user applies the draft");
+  assert.match(main, /mkdtempSync/);
+  assert.match(main, /rmSync\(SESSION_ROOT/);
+  assert.match(main, /disableHardwareAcceleration/);
+  assert.match(main, /ANALYSIS_SMOKE_TEST/);
+  assert.match(main, /\["EBUSY",\s*"ENOTEMPTY",\s*"EPERM"\]/);
+  assert.doesNotMatch(main, /shell\.openExternal/);
+  assert.deepEqual(main.match(/https:\/\/[^\s"'`)]+/g), [
+    "https://example.com",
+    "https://example.com",
+  ]);
+
+  assert.match(preload, /contextBridge\.exposeInMainWorld/);
+  assert.match(preload, /bundle-builder:save-file/);
+  assert.match(preload, /bundle-builder:convert-template/);
+  assert.match(preload, /bundle-builder:recovery-write/);
+  assert.match(preload, /bundle-builder:preferences-read/);
+  assert.match(preload, /bundle-builder:guided-sample-hidden/);
+  assert.match(preload, /bundle-builder:recovery-clear-all/);
+  assert.doesNotMatch(preload, /recovery-clean-on-exit/);
+  assert.doesNotMatch(main, /recovery-clean-on-exit/);
+  assert.match(preload, /webUtils\.getPathForFile/);
+  assert.match(main, /bundle-builder:convert-template/);
+  assert.match(main, /function assertTrustedIpcSender\(event, channel\)/);
+  assert.match(main, /assertTrustedIpcSender\(event, "bundle-builder:save-file"\)/);
+  assert.match(main, /assertTrustedIpcSender\(event, "bundle-builder:convert-template"\)/);
+  assert.match(main, /assertTrustedIpcSender\(event, "bundle-builder:recovery-write"\)/);
+  assert.match(main, /assertTrustedIpcSender\(event, "bundle-builder:preferences-read"\)/);
+  assert.match(main, /assertTrustedIpcSender\(event, "bundle-builder:guided-sample-hidden"\)/);
+  assert.match(main, /assertTrustedIpcSender\(event, "bundle-builder:recovery-clear-all"\)/);
+  assert.match(main, /assertTrustedIpcSender\(event, "bundle-builder:clipboard-write"\)/);
+  assert.match(preload, /bundle-builder:clipboard-write/);
+  assert.match(main, /clipboard\.writeText/);
+  assert.doesNotMatch(main, /clipboard\.readText/);
+  assert.match(main, /looksLikeAsset/, "missing packaged assets must return an error instead of the application HTML");
+  assert.match(main, /new RecoveryStore\(path\.join\(STABLE_APP_DATA_ROOT/);
+  assert.match(main, /printToPDF/);
+  assert.match(main, /preferCSSPageSize:\s*true/);
+  assert.match(main, /partition:\s*APP_PARTITION/);
+  assert.match(main, /preview\.webContents\.setWindowOpenHandler/);
+  assert.match(main, /preview\.webContents\.on\("will-navigate"/);
+  assert.doesNotMatch(preload, /require\(["'](?:http|https|net)/);
+
+  const manifest = JSON.parse(packageJson);
+  assert.equal(manifest.main, "electron/main.cjs");
+  assert.ok(manifest.scripts["package:win"]);
+  assert.equal(manifest.build.win.target[0].target, "nsis");
+  assert.equal(manifest.build.nsis.license, "build/EULA.txt");
+  assert.equal(manifest.build.nsis.oneClick, false);
+  assert.equal(manifest.build.nsis.allowToChangeInstallationDirectory, false);
+  assert.ok(manifest.build.extraFiles.some((entry) => entry.from === "build/EULA.txt" && entry.to === "EULA.txt"));
+  assert.ok(manifest.build.extraFiles.some((entry) => entry.from === "THIRD_PARTY_LICENSES.txt" && entry.to === "THIRD_PARTY_LICENSES.txt"));
+  assert.equal(eula.match(/kinhoe107/g)?.length, 1, "the Licensor definition is the only use of the GitHub username");
+  assert.match(eula, /Licence version:\s*1\.1/);
+  assert.match(eula, /source code that the Licensor has intentionally published through the official source repository/);
+  assert.doesNotMatch(eula, /attempt to obtain the Software's source code/);
+  assert.doesNotMatch(eula, /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i, "the licence must contain no email address");
+  assert.ok(eula.indexOf("17. DEFINITIONS") > eula.indexOf("16. GOVERNING LAW"), "definitions remain at the back");
+  await assert.rejects(access(new URL("../.openai/hosting.json", import.meta.url)));
+});

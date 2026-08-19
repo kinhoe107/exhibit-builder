@@ -1,0 +1,24 @@
+From: Guided Claimant <claimant@example.invalid>
+To: Guided Respondent <respondent@example.invalid>
+Date: Tue, 04 Aug 2026 10:30:00 +0100
+Subject: SAMPLE CLAIMANT EMAIL - guided exhibit
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="EXHIBIT_BUILDER_GUIDED_BOUNDARY"
+
+--EXHIBIT_BUILDER_GUIDED_BOUNDARY
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+SAMPLE DOCUMENT - FOR EXHIBIT BUILDER DEMONSTRATION ONLY
+
+This is an intentionally obvious EML evidence example dated 4 August 2026.
+Reference: DEMO-EMAIL-04.
+The file demonstrates that a saved email can be selected as an exhibit and rendered locally with its email headers.
+
+--EXHIBIT_BUILDER_GUIDED_BOUNDARY
+Content-Type: text/plain; charset=UTF-8; name="Guided_Attachment_Note.txt"
+Content-Disposition: attachment; filename="Guided_Attachment_Note.txt"
+Content-Transfer-Encoding: base64
+
+U0FNUExFIEFUVEFDSE1FTlQ=
+--EXHIBIT_BUILDER_GUIDED_BOUNDARY--
