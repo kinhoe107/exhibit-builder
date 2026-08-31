@@ -1,0 +1,9 @@
+{
+  "elections": {
+    "jszip@3.10.1": {
+      "declared": "(MIT OR GPL-3.0-or-later)",
+      "elected": "MIT"
+    }
+  },
+  "approvals": {}
+}

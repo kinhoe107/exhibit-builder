@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; frame-src 'self' data: blob:; font-src 'self'; connect-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f4ee" />
+    <meta
+      name="description"
+      content="Offline exhibit builder"
+    />
+    <title>Exhibit Builder | Offline Desktop</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="boot-screen" role="status" aria-live="polite">
+        <span class="boot-mark" aria-hidden="true">EB</span>
+        <span><strong>Exhibit Builder</strong><small>Opening the offline workspace...</small></span>
+      </div>
+    </div>
+    <style>
+      .boot-screen { align-items: center; background: #f7f4ee; color: #17202d; display: flex; gap: 12px; height: 100vh; justify-content: center; font-family: "Segoe UI", sans-serif; }
+      .boot-mark { align-items: center; background: #9f3f2f; border-radius: 8px 8px 3px 8px; color: #fff; display: inline-flex; font-family: Georgia, serif; font-size: 17px; font-weight: 700; height: 38px; justify-content: center; width: 38px; }
+      .boot-screen strong, .boot-screen small { display: block; }
+      .boot-screen strong { font-family: Georgia, serif; font-size: 18px; }
+      .boot-screen small { color: #4f5968; font-size: 14px; margin-top: 3px; }
+    </style>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

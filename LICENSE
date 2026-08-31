@@ -1,0 +1,91 @@
+EXHIBIT BUILDER SOURCE CODE NOTICE
+
+Copyright © 2026 kinhoe107. All rights reserved.
+
+1. STATUS AND PURPOSE
+
+Except for Third-Party Components identified separately, the Exhibit Builder source code made available through the official repository is proprietary source-available software owned or controlled by the Licensor. It is not open-source software.
+
+The source code is made publicly viewable for transparency, security inspection and source-code review so that prospective users and other reviewers can inspect how Exhibit Builder operates, including its privacy and security characteristics.
+
+For this notice, "Licensor" means the developer and distributor of Exhibit Builder operating through the GitHub username kinhoe107.
+
+2. INSPECTION ONLY
+
+The Licensor permits inspection and review of the Exhibit Builder source code as it is made available through the official repository, subject to GitHub's applicable terms and any rights that applicable law gives you and does not permit to be restricted.
+
+For the purposes of this notice, "inspection", "evaluation" and "review" mean reading and examining the source code for purposes such as understanding how Exhibit Builder operates, assessing security, reviewing privacy characteristics or evaluating the separately licensed packaged application.
+
+They do not grant a right to compile, build, execute, deploy, host or otherwise use the source code.
+
+3. NO GENERAL SOURCE-CODE LICENCE
+
+Except to the extent that applicable law grants rights that cannot lawfully be excluded or restricted, the Licensor grants no licence or permission to:
+
+a. use or execute the Exhibit Builder source code;
+b. compile or build it;
+c. copy, reproduce or download it except to the extent that a right arises independently under GitHub's applicable terms or applicable law;
+d. modify, adapt, translate or merge it;
+e. create derivative works from it;
+f. publish or distribute it;
+g. sublicense, sell, rent, lease or otherwise commercialise it;
+h. deploy or host it;
+i. incorporate it into another software product, platform or service;
+j. use it as an engine, backend or component of another product or service;
+k. use Licensor-owned source code, documentation, visual assets or other protectable expression from Exhibit Builder to create or distribute a modified, derivative, substitute or competing product; or
+l. otherwise exploit the source code or any substantial part of it beyond the limited inspection described in this notice.
+
+All rights not expressly granted by the Licensor are reserved.
+
+No licence arises by implication, estoppel or otherwise merely because the source code is publicly accessible.
+
+4. GITHUB
+
+Access to, display of, downloading of and forking of the repository through GitHub remain subject to GitHub's applicable terms.
+
+Nothing in this notice attempts to restrict rights that arise independently under GitHub's applicable terms for use of GitHub's own repository functionality.
+
+Any such platform rights do not create a broader licence from the Licensor to compile, execute, modify, distribute, deploy, host or commercially exploit the proprietary Exhibit Builder source code.
+
+5. PACKAGED APPLICATION
+
+The packaged Exhibit Builder desktop application is licensed separately under the applicable Exhibit Builder End User Licence Agreement distributed with the installer.
+
+A licence to use the packaged application does not grant any additional right to use, compile, build, modify, distribute, deploy, host or otherwise exploit the source code.
+
+Public access to the source code does not grant a licence to use the packaged application except under the applicable End User Licence Agreement.
+
+6. THIRD-PARTY COMPONENTS
+
+"Third-Party Components" means software, libraries, fonts, tools or other materials in the repository or packaged application for which rights are held by third parties and which are identified in THIRD_PARTY_LICENSES.txt or accompanying upstream licence materials.
+
+Third-Party Components are not licensed under this Source Code Notice. They remain subject to their respective third-party copyright and licence terms.
+
+Nothing in this notice:
+
+a. claims ownership of a Third-Party Component;
+b. restricts rights that an applicable third-party licence grants in a Third-Party Component;
+c. grants rights in a Third-Party Component beyond those granted by its applicable third-party licence; or
+d. causes rights granted in a Third-Party Component to extend to proprietary Exhibit Builder source code or materials.
+
+Where a Third-Party Component is available under alternative or dual licences, Exhibit Builder's distribution must rely on an option that permits the intended proprietary distribution model, and the applicable licence records should identify the option relied upon.
+
+If a third-party licence grants rights that differ from this notice, those rights apply only to the relevant Third-Party Component.
+
+7. BRANDING
+
+No licence is granted to use the Exhibit Builder name, logos, branding, product identity or other source-identifying material except as reasonably necessary to refer accurately to the genuine Exhibit Builder software.
+
+Nothing in this notice authorises any person to represent that a modified, derivative or independent product is an official Exhibit Builder product or is approved, sponsored or distributed by the Licensor.
+
+8. PATENTS, DESIGNS AND OTHER RIGHTS
+
+No licence under any patent, design right, trade mark or other intellectual-property right owned or controlled by the Licensor is granted except to the extent that such a licence necessarily arises under applicable law.
+
+9. NO WARRANTY
+
+THE EXHIBIT BUILDER SOURCE CODE IS PROVIDED FOR INSPECTION "AS IS" AND "AS AVAILABLE".
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE LICENSOR GIVES NO WARRANTY OR REPRESENTATION REGARDING ITS ACCURACY, COMPLETENESS, SECURITY, FITNESS FOR PURPOSE, NON-INFRINGEMENT, AVAILABILITY OR FREEDOM FROM DEFECTS.
+
+NOTHING IN THIS NOTICE EXCLUDES ANY RIGHT OR LIABILITY THAT APPLICABLE LAW DOES NOT PERMIT TO BE EXCLUDED.
